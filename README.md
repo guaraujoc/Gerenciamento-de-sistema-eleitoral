@@ -49,7 +49,7 @@ If you have a suggestion that would make this better, please fork the repo and c
       </a>
     </td>
     <td align="center" style="border: none;">
-      <a href="#" title="https://www.linkedin.com/in/guaraujoc/">
+      <a href="https://www.linkedin.com/in/guaraujoc/" title="https://www.linkedin.com/in/guaraujoc/">
         <img src="https://avatars.githubusercontent.com/u/130992375?s=400&u=168448c320a3ad61a9737a30880fa942249baedc&v=4" width="100px;"  style="border-radius: 50%;"><br>
         <sub>
           <b>Gustavo Araújo<br></b>
