@@ -1,6 +1,6 @@
 --Tabela Individuo
 CREATE TABLE IF NOT EXISTS Individuo (
-	idIndividuo INT AUTO_INCREMENT PRIMARY KEY,
+	idIndividuo SERIAL PRIMARY KEY,
 	Nome VARCHAR(100) NOT NULL
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS PessoaJuridica (
 
 --Tabela Processo
 CREATE TABLE IF NOT EXISTS Processo (
-	idProcesso INT AUTO_INCREMENT PRIMARY KEY,
+	idProcesso SERIAL PRIMARY KEY,
 	Data DATE NOT NULL,
 	Status VARCHAR(50) NOT NULL,
 	Tipo VARCHAR(50) NOT NULL,
@@ -51,13 +51,13 @@ CREATE TABLE IF NOT EXISTS Partido (
 
 --Tabela Programa
 CREATE TABLE IF NOT EXISTS Programa (
-	idPrograma INT AUTO_INCREMENT PRIMARY KEY,
-	Descricao TEXT,
+	idPrograma SERIAL PRIMARY KEY,
+	Descricao TEXT
 );
 
 --Tabela Cargo
 CREATE TABLE IF NOT EXISTS Cargo (
-	idCargo INT AUTO_INCREMENT PRIMARY KEY,
+	idCargo SERIAL PRIMARY KEY,
 	Cidade VARCHAR(50),
 	Estado VARCHAR(50),
 	Executivo BOOLEAN,
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS Cargo (
 
 --Tabela Pleito
 CREATE TABLE IF NOT EXISTS Pleito (
-	idPleito INT AUTO_INCREMENT PRIMARY KEY,
+	idPleito SERIAL PRIMARY KEY,
 	Data DATE NOT NULL,
 	QtdVotos NUMERIC(6),
 	Vice VARCHAR(100)
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS Candidatura (
 
 --Tabela DoacaoPJ
 CREATE TABLE IF NOT EXISTS DoacaoPJ (
-	idDoacaoPJ INT AUTO_INCREMENT PRIMARY KEY,
+	idDoacaoPJ SERIAL PRIMARY KEY,
 	Data DATE NOT NULL,
 	Valor NUMERIC(10, 2),
 	NumCandidato INT REFERENCES Candidato(NumCandidato) UNIQUE NOT NULL,
@@ -94,20 +94,20 @@ CREATE TABLE IF NOT EXISTS DoacaoPF (
     idDoacaoPF SERIAL PRIMARY KEY,
     Data DATE NOT NULL,
     Valor NUMERIC(10, 2) NOT NULL,
-    NumCandidato INT REFERENCES Candidato(NCandidato),
+    NumCandidato INT REFERENCES Candidato(NumCandidato),
     idDoador INT REFERENCES PessoaFisica(CPF)
 );
 
 --Tabela Apoiador
 CREATE TABLE IF NOT EXISTS Apoiador (
-    idApoiador INT AUTO_INCREMENT PRIMARY KEY,
+    idApoiador SERIAL PRIMARY KEY,
     idIndividuo INTEGER NOT NULL,
     CONSTRAINT fk_idIndividuo FOREIGN KEY (idIndividuo) REFERENCES Individuo(idIndividuo)
 );
 
 --Tabela Equipe Apoio
 CREATE TABLE IF NOT EXISTS EquipeApoio (
-    idEquipeApoio INT AUTO_INCREMENT PRIMARY KEY,
+    idEquipeApoio SERIAL PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL
 );
 
