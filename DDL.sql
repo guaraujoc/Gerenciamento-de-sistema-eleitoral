@@ -1,23 +1,23 @@
 --Tabela Individuo
-CREATE IF NOT EXISTS Individuo (
+CREATE TABLE IF NOT EXISTS Individuo (
 	idIndividuo INT AUTO_INCREMENT PRIMARY KEY,
 	Nome VARCHAR(100) NOT NULL
 );
 
 --Tabela Pessoa Física
-CREATE IF NOT EXISTS PessoaFisica (
+CREATE TABLE IF NOT EXISTS PessoaFisica (
 	CPF NUMERIC(11) PRIMARY KEY,
 	idIndividuo INT REFERENCES Individuo(idIndividuo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --Tabela Pessoa Jurídica
-CREATE IF NOT EXISTS PessoaJuridica (
+CREATE TABLE IF NOT EXISTS PessoaJuridica (
 	CNPJ NUMERIC(14) PRIMARY KEY,
 	idIndividuo INT REFERENCES Individuo(idIndividuo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --Tabela Processo
-CREATE IF NOT EXISTS Processo (
+CREATE TABLE IF NOT EXISTS Processo (
 	idProcesso INT AUTO_INCREMENT PRIMARY KEY,
 	Data DATE NOT NULL,
 	Status VARCHAR(50) NOT NULL,
@@ -29,7 +29,7 @@ CREATE IF NOT EXISTS Processo (
 );
 
 --Tabela Ficha
-CREATE IF NOT EXISTS Ficha (
+CREATE TABLE IF NOT EXISTS Ficha (
 	idIndividuo INT REFERENCES Individuo(idIndividuo) ON DELETE CASCADE ON UPDATE CASCADE,
 	idProcesso INT REFERENCES Processo(IdProcesso) ON DELETE CASCADE ON UPDATE CASCADE,
 	Data DATE NOT NULL,
@@ -37,26 +37,26 @@ CREATE IF NOT EXISTS Ficha (
 );
 
 --Tabela Candidato
-CREATE IF NOT EXISTS Candidato (
+CREATE TABLE IF NOT EXISTS Candidato (
 	NumCandidato INT PRIMARY KEY,
 	idIndividuo INT REFERENCES Individuo(idIndividuo) ON DELETE CASCADE ON UPDATE CASCADE,
 	Nome VARCHAR(100) NOT NULL
 );
 
 --Tabela Partido
-CREATE IF NOT EXISTS Partido (
+CREATE TABLE IF NOT EXISTS Partido (
 	Sigla VARCHAR(10) PRIMARY KEY,
 	NAfiliados NUMERIC(5)
 );
 
 --Tabela Programa
-CREATE IF NOT EXISTS Programa (
+CREATE TABLE IF NOT EXISTS Programa (
 	idPrograma INT AUTO_INCREMENT PRIMARY KEY,
 	Descricao TEXT,
 );
 
 --Tabela Cargo
-CREATE IF NOT EXISTS Cargo (
+CREATE TABLE IF NOT EXISTS Cargo (
 	idCargo INT AUTO_INCREMENT PRIMARY KEY,
 	Cidade VARCHAR(50),
 	Estado VARCHAR(50),
@@ -65,7 +65,7 @@ CREATE IF NOT EXISTS Cargo (
 );
 
 --Tabela Pleito
-CREATE IF NOT EXISTS Pleito (
+CREATE TABLE IF NOT EXISTS Pleito (
 	idPleito INT AUTO_INCREMENT PRIMARY KEY,
 	Data DATE NOT NULL,
 	QtdVotos NUMERIC(6),
@@ -73,7 +73,7 @@ CREATE IF NOT EXISTS Pleito (
 );
 
 --Tabela Candidatura
-CREATE IF NOT EXISTS Candidatura (
+CREATE TABLE IF NOT EXISTS Candidatura (
 	NumCandidato INT REFERENCES Candidato(NumCandidato) ON DELETE CASCADE ON UPDATE CASCADE,
 	idCargo INT REFERENCES Cargo(idCargo) ON DELETE CASCADE ON UPDATE CASCADE,
 	idPleito INT REFERENCES Pleito(idPleito) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -81,7 +81,7 @@ CREATE IF NOT EXISTS Candidatura (
 );
 
 --Tabela DoacaoPJ
-CREATE IF NOT EXISTS DoacaoPJ (
+CREATE TABLE IF NOT EXISTS DoacaoPJ (
 	idDoacaoPJ INT AUTO_INCREMENT PRIMARY KEY,
 	Data DATE NOT NULL,
 	Valor NUMERIC(10, 2),
@@ -90,7 +90,7 @@ CREATE IF NOT EXISTS DoacaoPJ (
 );
 
 --Tabela DoacaoPF
-CREATE TABLE DoacaoPF (
+CREATE TABLE IF NOT EXISTS DoacaoPF (
     idDoacaoPF SERIAL PRIMARY KEY,
     Data DATE NOT NULL,
     Valor NUMERIC(10, 2) NOT NULL,
@@ -99,14 +99,14 @@ CREATE TABLE DoacaoPF (
 );
 
 --Tabela Apoiador
-CREATE TABLE Apoiador (
+CREATE TABLE IF NOT EXISTS Apoiador (
     idApoiador INT AUTO_INCREMENT PRIMARY KEY,
     idIndividuo INTEGER NOT NULL,
     CONSTRAINT fk_idIndividuo FOREIGN KEY (idIndividuo) REFERENCES Individuo(idIndividuo)
 );
 
 --Tabela Equipe Apoio
-CREATE TABLE EquipeApoio (
+CREATE TABLE IF NOT EXISTS EquipeApoio (
     idEquipeApoio INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL
 );
