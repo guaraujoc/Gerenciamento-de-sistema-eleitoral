@@ -24,7 +24,7 @@ sudo apt-get install postgresql
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. As it is an evaluative project, the repository will be open for collaborations only after the end of the course.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
@@ -38,16 +38,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 <table>
   <tr>
-	</td>
-    <td align="center" style="border: none;">
-      <a href="#" title="defina o titulo do link">
-        <img src="https://avatars.githubusercontent.com/u/105086952?v=4" width="100px;" alt="Foto do Steve Jobs" style="border-radius: 50%;"><br>
-        <sub>
-          <b>Gabriela Andrade <br></b>
-		  <span style="color:grey;">Nusp-</span>
-        </sub>
-      </a>
-    </td>
     <td align="center" style="border: none;">
       <a href="https://www.linkedin.com/in/guaraujoc/" title="https://www.linkedin.com/in/guaraujoc/">
         <img src="https://avatars.githubusercontent.com/u/130992375?s=400&u=168448c320a3ad61a9737a30880fa942249baedc&v=4" width="100px;"  style="border-radius: 50%;"><br>
@@ -56,35 +46,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 		  <span style="color:grey;">13735630-</span>
         </sub>
       </a>
-    </td>
-    <td align="center" style="border: none;">
-      <a href="#" title="defina o titulo do link">
-        <img src="https://avatars.githubusercontent.com/u/62862399?v=4" width="100px;" alt="Foto do Mark Zuckerberg" style="border-radius: 50%;"><br>
-        <sub>
-          <b>Henrique Arauj<br></b>
-		  <span style="color:grey;">Nusp-</span>
-        </sub>
-      </a>
-	<td align="center" style="border: none;">
-      <a href="#" title="Coloque o seu link aqu/">
-        <img src="https://avatars.githubusercontent.com/u/117542613?v=4" width="100px;"  style="border-radius: 50%;"><br>
-        <sub>
-          <b>Marcus Silva<br></b>
-		  <span style="color:grey;">Nusp-</span>
-        </sub>
-      </a>
-    </td>
-	</td>
-	<td align="center" style="border: none;">
-      <a href="#" title="Coloque o seu link aqu/">
-        <img src="https://avatars.githubusercontent.com/u/54054734?v=4" width="100px;"  style="border-radius: 50%;"><br>
-        <sub>
-          <b>Wetti Alves<br></b>
-		  <span style="color:grey;">Nusp-</span>
-        </sub>
-      </a>
-    </td>
-	
   </tr>
 </table>
 
